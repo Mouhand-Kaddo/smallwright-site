@@ -145,19 +145,20 @@ const requirements = [
             screens.map((group) => (
               <div class="flex flex-col gap-4">
                 <h3 class="font-legend text-sm font-bold uppercase tracking-[0.14em] text-print-dim">{group.group}</h3>
-                <ul
+                <div
                   role="region"
                   tabindex="0"
                   aria-label={group.group}
-                  class="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-4 sm:-mx-8 sm:scroll-px-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible lg:px-0 lg:pb-0"
+                  class="-mx-4 overflow-x-auto snap-x snap-mandatory scroll-px-4 px-4 pb-4 sm:-mx-8 sm:scroll-px-8 sm:px-8 lg:mx-0 lg:overflow-visible lg:px-0 lg:pb-0"
                 >
+                  <ul class="flex w-max gap-4 lg:grid lg:w-auto lg:grid-cols-3 lg:gap-10">
                   {group.shots.map((shot) => (
                     <li class="w-[min(62vw,240px)] shrink-0 snap-start lg:w-auto">
                       <figure class="flex flex-col gap-3">
                         <Image
                           src={shot.src}
                           alt={shot.alt}
-                          widths={[240, 480, 720]}
+                          widths={[240, 360, 480, 720]}
                           sizes="(min-width: 1024px) 340px, 62vw"
                           class="h-auto w-full rounded-[1.25rem] ring-1 ring-white/10 shadow-[0_18px_36px_-18px_rgb(0_0_0/0.9)]"
                         />
@@ -165,7 +166,8 @@ const requirements = [
                       </figure>
                     </li>
                   ))}
-                </ul>
+                  </ul>
+                </div>
               </div>
             ))
           }
