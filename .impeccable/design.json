@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T14:33:57+00:00",
+  "title": "Design System: Smallwright",
+  "extensions": {
+    "colorMeta": {
+      "body": {
+        "role": "neutral",
+        "displayName": "Matte Body",
+        "canonical": "#1a1b26",
+        "oklch": "oklch(22.6% 0.021 280.5)",
+        "tonalRamp": [
+          "#0a0b0f",
+          "#24242b",
+          "#40414b",
+          "#5f606c",
+          "#80818f",
+          "#a2a4b1",
+          "#c7c8d3",
+          "#edeef7"
+        ]
+      },
+      "bezel": {
+        "role": "neutral",
+        "displayName": "Bezel Slate",
+        "canonical": "#24283b",
+        "oklch": "oklch(28.2% 0.036 274.7)",
+        "tonalRamp": [
+          "#090b12",
+          "#222430",
+          "#3e4150",
+          "#5c6073",
+          "#7c8198",
+          "#9fa4b9",
+          "#c4c8da",
+          "#eaeefd"
+        ]
+      },
+      "well": {
+        "role": "neutral",
+        "displayName": "Recess",
+        "canonical": "#0f1017",
+        "oklch": "oklch(17.5% 0.015 278.4)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#242529",
+          "#404248",
+          "#5f6169",
+          "#80828b",
+          "#a3a4ad",
+          "#c7c9d0",
+          "#edeef4"
+        ]
+      },
+      "key": {
+        "role": "neutral",
+        "displayName": "Key Slate",
+        "canonical": "#2c3048",
+        "oklch": "oklch(31.7% 0.043 276.4)",
+        "tonalRamp": [
+          "#090a14",
+          "#212432",
+          "#3d4153",
+          "#5b6077",
+          "#7b819d",
+          "#9ea4bd",
+          "#c3c8de",
+          "#e9edff"
+        ]
+      },
+      "key-lit": {
+        "role": "neutral",
+        "displayName": "Key Slate, lit",
+        "canonical": "color-mix(in oklab, var(--color-key), white 7%)",
+        "oklch": "oklch(36.5% 0.040 274.7)",
+        "tonalRamp": [
+          "#090b13",
+          "#212431",
+          "#3d4152",
+          "#5b6076",
+          "#7b819b",
+          "#9ea4bb",
+          "#c3c8dd",
+          "#e9eeff"
+        ]
+      },
+      "print": {
+        "role": "neutral",
+        "displayName": "Printed Grey",
+        "canonical": "#c0c6dd",
+        "oklch": "oklch(82.9% 0.033 274.0)",
+        "tonalRamp": [
+          "#090b12",
+          "#22242f",
+          "#3e414f",
+          "#5c6072",
+          "#7c8196",
+          "#9fa4b7",
+          "#c4c8d9",
+          "#eaeefc"
+        ]
+      },
+      "print-dim": {
+        "role": "neutral",
+        "displayName": "Faded Print",
+        "canonical": "#8f97b5",
+        "oklch": "oklch(68.0% 0.045 273.4)",
+        "tonalRamp": [
+          "#080a14",
+          "#212433",
+          "#3c4154",
+          "#5a6078",
+          "#79819e",
+          "#9da4be",
+          "#c2c8df",
+          "#e8eeff"
+        ]
+      },
+      "lcd": {
+        "role": "secondary",
+        "displayName": "LCD Grey-Green",
+        "canonical": "#b9c4a7",
+        "oklch": "oklch(80.4% 0.042 124.3)",
+        "tonalRamp": [
+          "#090d04",
+          "#22271a",
+          "#3e4533",
+          "#5d654e",
+          "#7d876c",
+          "#a0a991",
+          "#c5cdb8",
+          "#ebf2e0"
+        ]
+      },
+      "lcd-ink": {
+        "role": "secondary",
+        "displayName": "LCD Ink",
+        "canonical": "#1c2418",
+        "oklch": "oklch(24.8% 0.025 135.4)",
+        "tonalRamp": [
+          "#090c08",
+          "#22271f",
+          "#3e443b",
+          "#5c6458",
+          "#7c8677",
+          "#9fa89b",
+          "#c4ccc0",
+          "#eaf1e7"
+        ]
+      },
+      "lcd-ghost": {
+        "role": "secondary",
+        "displayName": "Unlit Segment",
+        "canonical": "#5e6952",
+        "oklch": "oklch(50.5% 0.038 128.5)",
+        "tonalRamp": [
+          "#090d05",
+          "#22271b",
+          "#3d4535",
+          "#5c6551",
+          "#7c876f",
+          "#9fa994",
+          "#c4cdba",
+          "#eaf2e2"
+        ]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Release Blue",
+        "canonical": "#7aa2f7",
+        "oklch": "oklch(71.9% 0.132 264.2)",
+        "tonalRamp": [
+          "#010825",
+          "#10224c",
+          "#273f76",
+          "#3f5ea2",
+          "#5a7fd1",
+          "#81a4ec",
+          "#aac9ff",
+          "#d4efff"
+        ]
+      },
+      "signal-lit": {
+        "role": "primary",
+        "displayName": "Release Blue, lit",
+        "canonical": "color-mix(in oklab, var(--color-signal), white 12%)",
+        "oklch": "oklch(75.4% 0.116 263.7)",
+        "tonalRamp": [
+          "#020922",
+          "#132347",
+          "#2a4070",
+          "#435f9b",
+          "#5e80c7",
+          "#85a4e4",
+          "#adc9ff",
+          "#d7efff"
+        ]
+      },
+      "signal-ink": {
+        "role": "primary",
+        "displayName": "Blue Key Ink",
+        "canonical": "#0d1530",
+        "oklch": "oklch(20.5% 0.055 268.8)",
+        "tonalRamp": [
+          "#070b16",
+          "#1e2435",
+          "#394158",
+          "#56607d",
+          "#7581a4",
+          "#99a4c3",
+          "#bec9e4",
+          "#e5eeff"
+        ]
+      },
+      "label": {
+        "role": "tertiary",
+        "displayName": "Back-Label Silver",
+        "canonical": "#d9dce3",
+        "oklch": "oklch(89.4% 0.010 267.4)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#242528",
+          "#404246",
+          "#5f6166",
+          "#808289",
+          "#a2a5ab",
+          "#c7c9ce",
+          "#edeef3"
+        ]
+      },
+      "label-ink": {
+        "role": "tertiary",
+        "displayName": "Sticker Ink",
+        "canonical": "#16171d",
+        "oklch": "oklch(20.6% 0.012 277.8)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#242529",
+          "#414247",
+          "#606167",
+          "#80828a",
+          "#a3a4ac",
+          "#c7c9cf",
+          "#edeef3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "the LCD headline only, balanced."
+      },
+      "readout": {
+        "displayName": "Readout",
+        "purpose": "the example-run lines on the LCD, set as a two-column table (a 5.25rem or 6.5rem stage column, then the value), with stages in uppercase."
+      },
+      "readout-large": {
+        "displayName": "Readout Large",
+        "purpose": "list items inside wells, in LCD Grey-Green or Back-Label Silver. Install step numerals use Doto 900 at body size."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "section headings in Back-Label Silver, capped at 18 to 20ch, balanced. On the back label they are clamp(1.75rem, 5vw, 2.5rem)."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "the LCD paragraph, max 38ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "section prose, 44 to 60ch."
+      },
+      "key": {
+        "displayName": "Key",
+        "purpose": "keycap legends. The Download key's legend is 1.25rem, or 1.5rem on wide screens."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "the product name beside the header icon."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "group, well and table-row headings."
+      },
+      "label-small": {
+        "displayName": "Label Small",
+        "purpose": "the LCD's annunciators and figure caption."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "screenshot captions and the Builder's capability list (at 1rem)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "raised-key",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.1), inset 0 -5px 0 rgb(0 0 0 / 0.35), 0 8px 16px -6px rgb(0 0 0 / 0.7)",
+        "purpose": "Keycaps at rest; the 5px inner lip is the key wall."
+      },
+      {
+        "name": "pressed-key",
+        "value": "inset 0 1px 0 rgb(255 255 255 / 0.08), inset 0 -2px 0 rgb(0 0 0 / 0.35), 0 3px 6px -3px rgb(0 0 0 / 0.7)",
+        "purpose": "Keycap active state, paired with translateY(3px)."
+      },
+      {
+        "name": "sunken-lcd",
+        "value": "inset 0 6px 14px -6px rgb(0 0 0 / 0.55), inset 0 -1px 0 rgb(255 255 255 / 0.25), 0 18px 40px -20px rgb(0 0 0 / 0.9)",
+        "purpose": "The display behind its bezel."
+      },
+      {
+        "name": "recess",
+        "value": "inset 0 2px 6px rgb(0 0 0 / 0.6), 0 1px 0 rgb(255 255 255 / 0.05)",
+        "purpose": "Wells cut into the body."
+      },
+      {
+        "name": "sticker",
+        "value": "0 1px 0 rgb(255 255 255 / 0.4) inset, 0 10px 24px -10px rgb(0 0 0 / 0.8)",
+        "purpose": "The back label on the plastic."
+      },
+      {
+        "name": "laid-photo",
+        "value": "0 18px 36px -18px rgb(0 0 0 / 0.9)",
+        "purpose": "Phone screenshots resting on the body, with a 1px white/10 ring."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-key",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Key press transform and shadow (120ms) and run-line switch-on (420ms)."
+      },
+      {
+        "name": "key-hover",
+        "value": "background-color 160ms ease-out",
+        "purpose": "Keycap lightening on hover."
+      },
+      {
+        "name": "segment-on",
+        "value": "420ms, 160ms stagger per line, 150ms initial delay",
+        "purpose": "Example-run lines go from lcd-ghost to lcd-ink; only under prefers-reduced-motion: no-preference."
+      },
+      {
+        "name": "scroll",
+        "value": "scroll-behavior: smooth",
+        "purpose": "Key jumps to sections; auto under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ],
+    "texture": {
+      "name": "lcd-dots",
+      "value": "radial-gradient(rgb(28 36 24 / 0.07) 1px, transparent 1.4px) / 5px 5px",
+      "purpose": "Dot-matrix grain on the LCD panel."
+    },
+    "focus": {
+      "value": "3px solid var(--color-lcd); outline-offset: 3px; border-radius: 6px",
+      "purpose": "Global focus ring."
+    }
+  },
+  "components": [
+    {
+      "name": "Keycap",
+      "kind": "button",
+      "refersTo": "key",
+      "description": "Raised slate key for section jumps and Source; sinks 3px when pressed.",
+      "html": "<a class=\"ds-key\" href=\"#\">How it works</a>",
+      "css": ".ds-key { display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 56px; padding: 0 16px; border: 0; border-radius: 12px; background: var(--color-key, #2c3048); color: var(--color-print, #c0c6dd); font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; text-align: center; box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.1), inset 0 -5px 0 rgb(0 0 0 / 0.35), 0 8px 16px -6px rgb(0 0 0 / 0.7); transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms ease-out; } .ds-key:hover { background: color-mix(in oklab, var(--color-key, #2c3048), white 7%); } .ds-key:active { transform: translateY(3px); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08), inset 0 -2px 0 rgb(0 0 0 / 0.35), 0 3px 6px -3px rgb(0 0 0 / 0.7); } .ds-key:focus-visible { outline: 3px solid var(--color-lcd, #b9c4a7); outline-offset: 3px; }"
+    },
+    {
+      "name": "Blue Key",
+      "kind": "button",
+      "refersTo": "key-signal",
+      "description": "The release key, the only blue on the page, with a printed legend above it.",
+      "html": "<div><span class=\"ds-key-legend\">Builder and Worker APKs</span><a class=\"ds-key-signal\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4v12M6 11l6 6 6-6M5 20h14\"/></svg>Download</a></div>",
+      "css": ".ds-key-signal { display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 56px; padding: 0 16px; border: 0; border-radius: 12px; background: var(--color-key, #2c3048); color: var(--color-print, #c0c6dd); font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 1rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; text-align: center; box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.1), inset 0 -5px 0 rgb(0 0 0 / 0.35), 0 8px 16px -6px rgb(0 0 0 / 0.7); transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms ease-out; } .ds-key-signal:hover { background: color-mix(in oklab, var(--color-key, #2c3048), white 7%); } .ds-key-signal:active { transform: translateY(3px); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08), inset 0 -2px 0 rgb(0 0 0 / 0.35), 0 3px 6px -3px rgb(0 0 0 / 0.7); } .ds-key-signal:focus-visible { outline: 3px solid var(--color-lcd, #b9c4a7); outline-offset: 3px; } .ds-key-signal { min-height: 64px; font-size: 1.25rem; background: var(--color-signal, #7aa2f7); color: var(--color-signal-ink, #0d1530); } .ds-key-signal:hover { background: color-mix(in oklab, var(--color-signal, #7aa2f7), white 12%); } .ds-key-signal svg { width: 1.1em; height: 1.1em; flex-shrink: 0; } .ds-key-legend { display: block; margin-bottom: 6px; font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-print-dim, #8f97b5); }"
+    },
+    {
+      "name": "LCD Panel",
+      "kind": "custom",
+      "refersTo": "lcd-panel",
+      "description": "Dot-matrix display sunk in a slate bezel, holding the headline, an example run and annunciators.",
+      "html": "<div class=\"ds-lcd\"><p class=\"ds-lcd-head\">Build apps.</p><ol class=\"ds-lcd-run\"><li><span>PLAN</span><span>Asks, then plans</span></li><li><span>COMPILE</span><span>In the Worker</span></li></ol><ul class=\"ds-lcd-ann\"><li>Model: cloud</li><li>Build: phone</li></ul></div>",
+      "css": ".ds-lcd { padding: 24px 20px 20px; border: 10px solid var(--color-bezel, #24283b); border-radius: 28px; background-color: var(--color-lcd, #b9c4a7); background-image: radial-gradient(rgb(28 36 24 / 0.07) 1px, transparent 1.4px); background-size: 5px 5px; color: var(--color-lcd-ink, #1c2418); box-shadow: inset 0 6px 14px -6px rgb(0 0 0 / 0.55), inset 0 -1px 0 rgb(255 255 255 / 0.25), 0 18px 40px -20px rgb(0 0 0 / 0.9); } .ds-lcd-head { margin: 0; font-family: var(--font-display, Doto, monospace); font-weight: 900; font-size: 2.5rem; line-height: 0.95; } .ds-lcd-run { margin: 16px 0 0; padding: 0; list-style: none; font-family: var(--font-display, Doto, monospace); font-weight: 900; font-size: 1rem; line-height: 1.25; } .ds-lcd-run li { display: grid; grid-template-columns: 5.25rem 1fr; gap: 12px; } .ds-lcd-ann { display: flex; gap: 20px; margin: 16px 0 0; padding: 0; list-style: none; font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Well",
+      "kind": "card",
+      "refersTo": "well",
+      "description": "Recess cut into the body; a printed heading over a dot-matrix list.",
+      "html": "<div class=\"ds-well\"><h3 class=\"ds-well-title\">Lives on your phone</h3><ul class=\"ds-well-list\"><li>Source files</li><li>Builds</li></ul></div>",
+      "css": ".ds-well { padding: 24px; border-radius: 16px; background: var(--color-well, #0f1017); box-shadow: inset 0 2px 6px rgb(0 0 0 / 0.6), 0 1px 0 rgb(255 255 255 / 0.05); } .ds-well-title { margin: 0; font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-print-dim, #8f97b5); } .ds-well-list { display: flex; flex-direction: column; gap: 12px; margin: 20px 0 0; padding: 0; list-style: none; font-family: var(--font-display, Doto, monospace); font-weight: 900; font-size: 1.5rem; color: var(--color-lcd, #b9c4a7); }"
+    },
+    {
+      "name": "Back Label",
+      "kind": "card",
+      "refersTo": "back-label",
+      "description": "Silver specification sticker with a ruled two-column table.",
+      "html": "<div class=\"ds-label\"><h2 class=\"ds-label-title\">Requirements</h2><table class=\"ds-label-table\"><tbody><tr><th scope=\"row\">Android</th><td>12 or newer</td></tr><tr><th scope=\"row\">Phone</th><td>64-bit ARM</td></tr></tbody></table></div>",
+      "css": ".ds-label { padding: 20px; border-radius: 16px; background: var(--color-label, #d9dce3); color: var(--color-label-ink, #16171d); box-shadow: 0 1px 0 rgb(255 255 255 / 0.4) inset, 0 10px 24px -10px rgb(0 0 0 / 0.8); font-family: var(--font-sans, Archivo, sans-serif); } .ds-label-title { margin: 0; font-size: 1.75rem; font-weight: 800; line-height: 1.05; } .ds-label-table { width: 100%; margin-top: 24px; border-collapse: collapse; text-align: left; } .ds-label-table tr { border-top: 1px solid rgb(22 23 29 / 0.25); } .ds-label-table th { width: 38%; padding: 14px 16px 14px 0; font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; } .ds-label-table td { padding: 14px 0; line-height: 1.375; }"
+    },
+    {
+      "name": "Header Strip",
+      "kind": "nav",
+      "refersTo": "app-icon",
+      "description": "Icon and wordmark at the top of the calculator face.",
+      "html": "<a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 108 108\" aria-hidden=\"true\"><rect width=\"108\" height=\"108\" rx=\"26\" fill=\"var(--color-body, #1a1b26)\"/><path fill=\"var(--color-signal, #7aa2f7)\" fill-rule=\"evenodd\" d=\"M46,30 H62 A6,6 0 0 1 68,36 V72 A6,6 0 0 1 62,78 H46 A6,6 0 0 1 40,72 V36 A6,6 0 0 1 46,30 Z M50.1,43.08 L61.02,54 L50.1,64.92 L47.34,62.16 L56.07,54 L47.34,45.84 Z\"/></svg><span>Smallwright</span></a>",
+      "css": ".ds-brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-print, #c0c6dd); font-family: var(--font-legend, 'Archivo Narrow', sans-serif); font-size: 1.125rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; } .ds-brand svg { width: 36px; height: 36px; border-radius: 10px; box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1); } .ds-brand:focus-visible { outline: 3px solid var(--color-lcd, #b9c4a7); outline-offset: 3px; border-radius: 6px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pocket Calculator",
+    "overview": "The page is the face of a pocket calculator: the first computer that worked entirely in your palm, with no network. The whole ground is matte navy-black plastic. A large grey-green LCD, sunk behind a slate bezel, carries the headline and a stepped readout in dot-matrix ink. Below it sits a bank of raised slate keys with printed legends, and one blue key that takes you to the release. Further down, the page turns the calculator over: recessed wells hold lists, and a silver sticker on the back carries the specifications.\n\nDensity is low and the scale contrast is deliberate. The LCD headline runs up to 5.25rem while the printed legends sit at 0.7rem, and almost nothing falls between them except the Archivo section headlines and body copy. Depth is physical, made by molding (raised keys, sunken wells, a recessed screen) and never by floating cards. Each colour stands for one material, and the blue stands for one action.\n\nThe build rejects the dark hero with a floating phone mockup and a row of feature cards. Real phone screenshots are the only pictures.",
+    "keyCharacteristics": [
+      "One plastic ground (#1a1b26) under the whole page; no section backgrounds.",
+      "An LCD panel with a 5px dot-matrix texture, inset shadow and a thick bezel border.",
+      "Raised keycaps with a dark bottom lip that compress 3px when pressed.",
+      "A single blue (#7aa2f7) reserved for the release key and the launcher-icon glyph.",
+      "Doto dot-matrix type only for readouts; Archivo Narrow uppercase for every printed legend."
+    ],
+    "rules": [
+      {
+        "name": "The One Blue Key Rule",
+        "body": "Outside the launcher-icon artwork, Release Blue only ever means \"get the release\". No links, headings, highlights or focus states are blue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Material Rule",
+        "body": "A colour is a material, not a decoration. Each surface takes its material's colour and its paired ink: key with print, LCD with LCD ink, sticker with sticker ink, blue key with blue-key ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readout Rule",
+        "body": "Doto is for things a display would show: the LCD, the run, readout lists and step numerals. It never sets a section headline or a paragraph.",
+        "section": "typography"
+      },
+      {
+        "name": "The Printed Legend Rule",
+        "body": "Every small label is Archivo Narrow, uppercase and tracked between 0.06em (keys) and 0.22em (wordmark). Archivo never appears in uppercase.",
+        "section": "typography"
+      },
+      {
+        "name": "The Molded Plastic Rule",
+        "body": "A shadow has to say whether a surface is raised, pressed, sunken or laid on top. Only keys respond to interaction, by sinking 3px.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every surface its material's paired ink: print on key, LCD ink on the LCD, sticker ink on the back label, blue-key ink on Release Blue.",
+      "Do keep Release Blue (#7aa2f7) for the release key and the launcher-icon glyph only.",
+      "Do make depth from the six shadows in the Shadow Vocabulary, each one saying raised, pressed, sunken or laid on top.",
+      "Do set readouts in Doto 900 and printed legends in uppercase Archivo Narrow 600 or 700, tracked 0.06 to 0.22em.",
+      "Do keep the jump in scale: huge readouts and headlines against 0.7 to 0.875rem legends.",
+      "Do wrap run-line motion in `prefers-reduced-motion: no-preference` and keep the global LCD Grey-Green focus ring (3px solid, 3px offset)."
+    ],
+    "donts": [
+      "Don't use blue for links, headings, focus or emphasis.",
+      "Don't set section headlines or paragraphs in Doto, or set Archivo in uppercase.",
+      "Don't use floating cards, glass, blur or ambient glow; a surface is either molded into the body or laid on top of it.",
+      "Don't put a mockup, illustration or invented UI where a real phone screenshot belongs.",
+      "Don't give sections their own background colours; the body plastic runs under the whole page.",
+      "Don't add rules between sections or blocks; the only rules are the back label's table rows."
+    ]
+  }
+}

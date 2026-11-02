@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --color-body: #1a1b26;
+  --color-bezel: #24283b;
+  --color-well: #0f1017;
+  --color-key: #2c3048;
+  --color-print: #c0c6dd;
+  --color-print-dim: #8f97b5;
+  --color-lcd: #b9c4a7;
+  --color-lcd-ink: #1c2418;
+  --color-lcd-ghost: #5e6952;
+  --color-signal: #7aa2f7;
+  --color-signal-ink: #0d1530;
+  --color-label: #d9dce3;
+  --color-label-ink: #16171d;
+
+  --font-display: var(--font-doto);
+  --font-sans: var(--font-archivo);
+  --font-legend: var(--font-archivo-narrow);
+}
+
+@layer base {
+  html {
+    background: var(--color-body);
+    color: var(--color-print);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scrollbar-color: var(--color-key) var(--color-body);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  ::selection {
+    background: var(--color-lcd);
+    color: var(--color-lcd-ink);
+  }
+
+  p,
+  li,
+  td {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-lcd);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .lcd {
+    background-color: var(--color-lcd);
+    background-image: radial-gradient(rgb(28 36 24 / 0.07) 1px, transparent 1.4px);
+    background-size: 5px 5px;
+    color: var(--color-lcd-ink);
+    box-shadow:
+      inset 0 6px 14px -6px rgb(0 0 0 / 0.55),
+      inset 0 -1px 0 rgb(255 255 255 / 0.25),
+      0 18px 40px -20px rgb(0 0 0 / 0.9);
+  }
+
+  .lcd ::selection {
+    background: var(--color-lcd-ink);
+    color: var(--color-lcd);
+  }
+
+  .well {
+    background: var(--color-well);
+    box-shadow:
+      inset 0 2px 6px rgb(0 0 0 / 0.6),
+      0 1px 0 rgb(255 255 255 / 0.05);
+  }
+
+  .keycap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    text-wrap: balance;
+    background: var(--color-key);
+    color: var(--color-print);
+    font-family: var(--font-legend);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.1),
+      inset 0 -5px 0 rgb(0 0 0 / 0.35),
+      0 8px 16px -6px rgb(0 0 0 / 0.7);
+    transition:
+      transform 120ms cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 120ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 160ms ease-out;
+  }
+
+  .keycap:hover {
+    background: color-mix(in oklab, var(--color-key), white 7%);
+  }
+
+  .keycap:active {
+    transform: translateY(3px);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.08),
+      inset 0 -2px 0 rgb(0 0 0 / 0.35),
+      0 3px 6px -3px rgb(0 0 0 / 0.7);
+  }
+
+  .keycap-signal {
+    background: var(--color-signal);
+    color: var(--color-signal-ink);
+  }
+
+  .keycap-signal:hover {
+    background: color-mix(in oklab, var(--color-signal), white 12%);
+  }
+
+  .run-line {
+    color: var(--color-lcd-ink);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .run-line {
+      animation: segment-on 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: calc(var(--step) * 160ms + 150ms);
+    }
+  }
+
+  @keyframes segment-on {
+    from {
+      color: var(--color-lcd-ghost);
+    }
+    to {
+      color: var(--color-lcd-ink);
+    }
+  }
+
+  .back-label {
+    background: var(--color-label);
+    color: var(--color-label-ink);
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 0.4) inset,
+      0 10px 24px -10px rgb(0 0 0 / 0.8);
+  }
+}

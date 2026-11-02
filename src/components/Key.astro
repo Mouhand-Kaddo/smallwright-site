@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  legend?: string;
+  signal?: boolean;
+  class?: string;
+}
+
+const { href, label, legend, signal = false, class: className = '' } = Astro.props;
+---
+
+<div class:list={['flex flex-col gap-1.5', className]}>
+  {legend && <span class="font-legend text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-print-dim">{legend}</span>}
+  <a href={href} class:list={['keycap grow px-4', signal && 'keycap-signal']}>
+    {
+      signal && (
+        <svg viewBox="0 0 24 24" class="size-[1.1em] shrink-0" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 4v12M6 11l6 6 6-6M5 20h14" />
+        </svg>
+      )
+    }
+    {label}
+  </a>
+</div>

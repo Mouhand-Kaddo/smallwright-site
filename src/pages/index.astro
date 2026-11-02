@@ -1,0 +1,286 @@
+---
+import { Font, Image } from 'astro:assets';
+import builderChat from '../assets/screens/builder-chat.png';
+import builderProjects from '../assets/screens/builder-projects.png';
+import waterTracker from '../assets/screens/water-tracker.png';
+import checklist from '../assets/screens/checklist.png';
+import notes from '../assets/screens/notes.png';
+import '../styles/global.css';
+import Key from '../components/Key.astro';
+import AppIcon from '../components/AppIcon.astro';
+import { site } from '../site';
+
+const base = import.meta.env.BASE_URL;
+const description =
+  `${site.name} is an Android app that builds Android apps on the phone. A cloud model writes plain Java and XML; the phone compiles, signs and installs it.`;
+
+const exampleRun = [
+  { stage: 'You', text: 'A water tracker' },
+  { stage: 'Plan', text: 'Asks, then plans' },
+  { stage: 'Write', text: 'Java and XML' },
+  { stage: 'Compile', text: 'In the Worker' },
+  { stage: 'Sign', text: "Project's own key" },
+  { stage: 'Install', text: 'After your tap' },
+];
+
+const screens = [
+  {
+    group: 'The Builder',
+    shots: [
+      { src: builderChat, caption: 'A new chat', alt: 'The Builder asking what to build, with suggestions for a water tracker, a checklist and notes' },
+      { src: builderProjects, caption: 'Projects and chats', alt: "The Builder's project drawer listing a project, its chats and settings" },
+    ],
+  },
+  {
+    group: 'Apps it built on the phone',
+    shots: [
+      { src: waterTracker, caption: 'Water tracker', alt: 'A generated water tracker app showing 500 ml of a 1750 ml goal and the last seven days' },
+      { src: checklist, caption: 'Checklist', alt: 'A generated checklist app with three items, one ticked off' },
+      { src: notes, caption: 'Notes', alt: 'A generated notes app with title search and one saved note' },
+    ],
+  },
+];
+
+const staysOnPhone = ['Source files', 'The compiler', 'Builds', 'Signing keys', 'The finished apps'];
+const sentToModel = ['Your messages', "The project's source files", 'Pictures you attach'];
+
+const builderCan = [
+  'Plan before it edits',
+  'Edit in steps until done',
+  'Run in the background',
+  'Make icons and pictures (OpenRouter)',
+  'Look things up (OpenRouter)',
+  'Read crash reports',
+  'Look at the running app',
+  'Undo its last change',
+];
+
+const requirements = [
+  { item: 'Android', value: '12 or newer' },
+  { item: 'Phone', value: '64-bit ARM' },
+  { item: 'Model key', value: 'OpenRouter, or any OpenAI-compatible service' },
+  { item: 'Cost', value: 'Paid by you, per request, with no spending limit set by the app' },
+  {
+    item: 'OpenRouter only',
+    value: 'Web search, app icons and pictures, attached pictures, cost totals and the spending limit',
+  },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#1a1b26" />
+    <title>{site.name}: build Android apps on your phone</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={site.name} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <Font cssVariable="--font-doto" preload />
+    <Font cssVariable="--font-archivo" preload />
+    <Font cssVariable="--font-archivo-narrow" />
+  </head>
+  <body class="min-h-svh">
+    <header class="mx-auto flex min-h-svh max-w-6xl flex-col gap-5 px-4 pb-8 pt-5 sm:px-8 sm:pt-8 lg:gap-7">
+      <div class="flex items-center gap-4">
+        <a href={base} class="flex min-w-0 items-center gap-3 no-underline">
+          <AppIcon app="builder" class="size-9 rounded-[10px] ring-1 ring-white/10" />
+          <span class="font-legend text-lg font-bold uppercase tracking-[0.14em] text-print [overflow-wrap:anywhere] sm:tracking-[0.22em]">{site.name}</span>
+        </a>
+      </div>
+
+      <div class="lcd grid grid-cols-1 gap-x-10 gap-y-5 rounded-[1.75rem] border-[10px] border-bezel px-5 pb-5 pt-6 sm:border-[16px] sm:px-8 sm:pt-8 lg:grid-cols-[1.2fr_1fr] lg:gap-y-8">
+          <h1 class="font-display text-[clamp(1.75rem,10.5vw,5.25rem)] font-black leading-[0.95] text-balance lg:col-span-2">
+            Build Android apps on your phone.
+          </h1>
+          <p class="max-w-[38ch] self-start text-lg leading-snug sm:text-xl lg:text-2xl lg:leading-snug">
+            Describe an app in a chat. A cloud model writes plain Java and XML. Your phone compiles, signs and
+            installs it.
+          </p>
+          <figure class="flex flex-col gap-2.5">
+            <figcaption class="font-legend text-[0.7rem] font-bold uppercase tracking-[0.14em]">Example run</figcaption>
+            <ol class="flex flex-col gap-1.5 font-display text-base font-black leading-tight sm:text-lg">
+              {
+                exampleRun.map((line, step) => (
+                  <li class="run-line grid [overflow-wrap:anywhere] grid-cols-[5.25rem_minmax(0,1fr)] gap-3 sm:grid-cols-[6.5rem_minmax(0,1fr)]" style={`--step:${step}`}>
+                    <span class="uppercase">{line.stage}</span>
+                    <span>{line.text}</span>
+                  </li>
+                ))
+              }
+            </ol>
+          </figure>
+          <ul class="flex flex-wrap gap-x-5 gap-y-1 font-legend text-[0.7rem] font-bold uppercase tracking-[0.14em] lg:col-span-2 lg:justify-end">
+            <li>Model: cloud</li>
+            <li>Build: phone</li>
+            <li>Alpha</li>
+          </ul>
+      </div>
+
+      <nav aria-label="Page" class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-[repeat(4,1fr)_1.6fr] lg:gap-4">
+        <Key
+          href={site.releaseUrl}
+          label="Download"
+          legend="Builder and Worker APKs"
+          signal
+          class="col-span-2 sm:col-span-4 lg:col-span-1 lg:col-start-5 lg:row-span-2 lg:row-start-1 [&>a]:min-h-16 [&>a]:text-xl lg:[&>a]:text-2xl"
+        />
+        <Key href="#sent" label="What is sent" class="[&>a]:min-h-14" />
+        <Key href="#how" label="How it works" class="[&>a]:min-h-14" />
+        <Key href="#requirements" label="Requirements" class="[&>a]:min-h-14" />
+        <Key href="#install" label="Install" class="[&>a]:min-h-14" />
+        <Key href={site.sourceUrl} label="Source" class="col-span-2 sm:col-span-4 lg:col-span-4 [&>a]:min-h-14" />
+      </nav>
+    </header>
+
+    <main class="mx-auto flex max-w-6xl flex-col gap-28 px-4 pb-24 pt-20 sm:gap-36 sm:px-8 sm:pt-28">
+      <section id="screens" aria-labelledby="screens-title" class="scroll-mt-8">
+        <h2 id="screens-title" class="max-w-[20ch] text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label text-balance">
+          Screens from a real phone.
+        </h2>
+        <div class="mt-10 flex flex-col gap-12 lg:gap-16">
+          {
+            screens.map((group) => (
+              <div class="flex flex-col gap-4">
+                <h3 class="font-legend text-sm font-bold uppercase tracking-[0.14em] text-print-dim">{group.group}</h3>
+                <ul
+                  role="region"
+                  tabindex="0"
+                  aria-label={group.group}
+                  class="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pb-4 sm:-mx-8 sm:scroll-px-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible lg:px-0 lg:pb-0"
+                >
+                  {group.shots.map((shot) => (
+                    <li class="w-[min(62vw,240px)] shrink-0 snap-start lg:w-auto">
+                      <figure class="flex flex-col gap-3">
+                        <Image
+                          src={shot.src}
+                          alt={shot.alt}
+                          widths={[240, 480, 720]}
+                          sizes="(min-width: 1024px) 340px, 62vw"
+                          class="h-auto w-full rounded-[1.25rem] ring-1 ring-white/10 shadow-[0_18px_36px_-18px_rgb(0_0_0/0.9)]"
+                        />
+                        <figcaption class="font-legend text-sm font-semibold uppercase tracking-[0.08em] text-print">{shot.caption}</figcaption>
+                      </figure>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="sent" class="scroll-mt-8">
+        <h2 class="max-w-[18ch] text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label text-balance">
+          Only the model runs in the cloud.
+        </h2>
+        <div class="mt-10 grid gap-4 md:grid-cols-2 md:gap-6">
+          <div class="well rounded-2xl p-6 sm:p-8">
+            <h3 class="font-legend text-sm font-bold uppercase tracking-[0.14em] text-print-dim">Lives on your phone</h3>
+            <ul class="mt-5 flex flex-col gap-3 font-display text-2xl font-black text-lcd sm:text-3xl">
+              {staysOnPhone.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+          <div class="well rounded-2xl p-6 sm:p-8">
+            <h3 class="font-legend text-sm font-bold uppercase tracking-[0.14em] text-print-dim">Sent to the model service you pick</h3>
+            <ul class="mt-5 flex flex-col gap-3 font-display text-2xl font-black text-label sm:text-3xl">
+              {sentToModel.map((item) => <li>{item}</li>)}
+            </ul>
+            <p class="mt-8 max-w-[44ch] leading-relaxed text-print">
+              You pay that service for each request. The app sets no spending limit for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="scroll-mt-8 grid gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+        <div>
+          <AppIcon app="builder" class="size-20 rounded-[22px] ring-1 ring-white/10" />
+          <h2 class="mt-6 text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label">The Builder</h2>
+          <p class="mt-5 max-w-[60ch] text-lg leading-relaxed">
+            Holds your projects, your model key and the chat. It asks before it starts a new app, then works until
+            the model says it is done. Apps come out as ordinary native Android apps in Java and XML.
+          </p>
+          <ul class="mt-8 grid grid-cols-1 gap-y-3">
+            {
+              builderCan.map((item) => (
+                <li class="font-legend text-base font-semibold uppercase tracking-[0.08em] text-print">{item}</li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <AppIcon app="worker" class="size-20 rounded-[22px] ring-1 ring-white/10" />
+          <h2 class="mt-6 text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label">The Worker</h2>
+          <p class="mt-5 max-w-[48ch] text-lg leading-relaxed">
+            Compiles each project with ECJ, D8 and AAPT2. It is a separate app with its own Android user and no
+            Internet permission, and it accepts only a Builder signed with the same key.
+          </p>
+          <p class="mt-5 max-w-[48ch] text-lg leading-relaxed">
+            Each project gets its own signing key. Installing goes through Android's own confirmation screen.
+            Generated code never runs inside the Builder.
+          </p>
+        </div>
+      </section>
+
+      <section id="requirements" class="scroll-mt-8">
+        <div class="back-label max-w-3xl rounded-2xl p-5 sm:p-10">
+          <div class="flex flex-wrap items-baseline justify-between gap-3">
+            <h2 class="text-[clamp(1.75rem,5vw,2.5rem)] font-extrabold leading-[1.05] [overflow-wrap:anywhere]">Requirements</h2>
+            <span class="font-legend text-sm font-bold uppercase tracking-[0.18em]">{site.name} · Alpha</span>
+          </div>
+          <table class="mt-8 w-full border-collapse text-left">
+            <tbody>
+              {
+                requirements.map((row) => (
+                  <tr class="border-t border-label-ink/25 align-baseline">
+                    <th scope="row" class="py-3.5 pr-4 max-sm:block max-sm:pb-0 sm:w-[38%] font-legend text-sm font-bold uppercase tracking-[0.1em]">
+                      {row.item}
+                    </th>
+                    <td class="py-3.5 leading-snug max-sm:block max-sm:pt-1">{row.value}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="install" class="scroll-mt-8 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+        <div>
+          <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label">Install</h2>
+          <ol class="mt-8 flex flex-col gap-5 text-lg leading-relaxed">
+            <li class="grid grid-cols-[2.5rem_1fr]">
+              <span class="font-display font-black text-lcd">1</span>
+              <span>Download both APKs from the latest release.</span>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr]">
+              <span class="font-display font-black text-lcd">2</span>
+              <span>Install the Worker first, then the Builder. Both must come from the same release.</span>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr]">
+              <span class="font-display font-black text-lcd">3</span>
+              <span>
+                On first start, the Builder shows Google's Android SDK terms. Once you accept them, it downloads
+                Google's Android platform files to the phone.
+              </span>
+            </li>
+          </ol>
+        </div>
+        <Key
+          href={site.releaseUrl}
+          label="Download the latest release"
+          signal
+          class="[&>a]:min-h-24 [&>a]:text-xl sm:[&>a]:text-2xl"
+        />
+      </section>
+    </main>
+
+    <footer class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 pb-10 font-legend text-sm font-semibold uppercase tracking-[0.12em] text-print-dim sm:px-8">
+      <span>{site.name} is an alpha. Apache-2.0.</span>
+      <a href={site.sourceUrl} class="text-print underline">Source and build instructions</a>
+    </footer>
+  </body>
+</html>
