@@ -131,7 +131,7 @@ const requirements = [
         <Key
           href={site.releaseUrl}
           label="Download"
-          legend="Builder and Worker APKs"
+          legend="One APK"
           signal
           class="col-span-2 sm:col-span-4 lg:col-span-1 lg:col-start-5 lg:row-span-2 lg:row-start-1 [&>a]:min-h-16 [&>a]:text-xl lg:[&>a]:text-2xl"
         />
@@ -264,18 +264,18 @@ const requirements = [
           <ol class="mt-8 flex flex-col gap-5 text-lg leading-relaxed">
             <li class="grid grid-cols-[2.5rem_1fr]">
               <span class="font-display font-black text-lcd">1</span>
-              <span>Download both APKs from the latest release.</span>
+              <span>Download the Builder APK from the latest release and install it.</span>
             </li>
             <li class="grid grid-cols-[2.5rem_1fr]">
               <span class="font-display font-black text-lcd">2</span>
-              <span>Install the Worker first, then the Builder. Both must come from the same release.</span>
-            </li>
-            <li class="grid grid-cols-[2.5rem_1fr]">
-              <span class="font-display font-black text-lcd">3</span>
               <span>
                 On first start, the Builder shows Google's Android SDK terms. Once you accept them, it downloads
                 Google's Android platform files to the phone.
               </span>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr]">
+              <span class="font-display font-black text-lcd">3</span>
+              <span>The Builder carries the Worker. Tap Install the build worker and confirm Android's prompt.</span>
             </li>
           </ol>
         </div>
