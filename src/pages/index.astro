@@ -80,7 +80,7 @@ const requirements = [
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <Font cssVariable="--font-doto" preload />
     <Font cssVariable="--font-archivo" preload />
-    <Font cssVariable="--font-archivo-narrow" />
+    <Font cssVariable="--font-archivo-narrow" preload />
   </head>
   <body class="min-h-svh">
     <header class="mx-auto flex min-h-svh max-w-6xl flex-col gap-5 px-4 pb-8 pt-5 sm:px-8 sm:pt-8 lg:gap-7">
@@ -136,7 +136,7 @@ const requirements = [
     </header>
 
     <main class="mx-auto flex max-w-6xl flex-col gap-28 px-4 pb-24 pt-20 sm:gap-36 sm:px-8 sm:pt-28">
-      <section id="screens" aria-labelledby="screens-title" class="scroll-mt-8">
+      <section id="screens" aria-labelledby="screens-title" class="deferred-section scroll-mt-8">
         <h2 id="screens-title" class="max-w-[20ch] text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label text-balance">
           Screens from a real phone.
         </h2>
@@ -174,7 +174,7 @@ const requirements = [
         </div>
       </section>
 
-      <section id="sent" class="scroll-mt-8">
+      <section id="sent" class="deferred-section scroll-mt-8">
         <h2 class="max-w-[18ch] text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label text-balance">
           Only the model runs in the cloud.
         </h2>
@@ -197,7 +197,7 @@ const requirements = [
         </div>
       </section>
 
-      <section id="how" class="scroll-mt-8 grid gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+      <section id="how" class="deferred-section scroll-mt-8 grid gap-14 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
         <div>
           <AppIcon app="builder" class="size-20 rounded-[22px] ring-1 ring-white/10" />
           <h2 class="mt-6 text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label">The Builder</h2>
@@ -227,7 +227,7 @@ const requirements = [
         </div>
       </section>
 
-      <section id="requirements" class="scroll-mt-8">
+      <section id="requirements" class="deferred-section scroll-mt-8">
         <div class="back-label max-w-3xl rounded-2xl p-5 sm:p-10">
           <div class="flex flex-wrap items-baseline justify-between gap-3">
             <h2 class="text-[clamp(1.75rem,5vw,2.5rem)] font-extrabold leading-[1.05] [overflow-wrap:anywhere]">Requirements</h2>
@@ -250,7 +250,7 @@ const requirements = [
         </div>
       </section>
 
-      <section id="install" class="scroll-mt-8 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+      <section id="install" class="deferred-section scroll-mt-8 grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-end">
         <div>
           <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-[1.02] text-label">Install</h2>
           <ol class="mt-8 flex flex-col gap-5 text-lg leading-relaxed">

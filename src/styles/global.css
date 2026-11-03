@@ -59,6 +59,11 @@
 }
 
 @layer components {
+  .deferred-section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 1000px;
+  }
+
   .lcd {
     background-color: var(--color-lcd);
     background-image: radial-gradient(rgb(28 36 24 / 0.07) 1px, transparent 1.4px);
