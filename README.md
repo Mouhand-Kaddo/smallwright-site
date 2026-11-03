@@ -9,4 +9,4 @@ pnpm build      # writes dist/
 pnpm preview
 ```
 
-The product name and links are in `src/site.ts`. The site deploys to GitHub Pages at `/smallwright-site/` through `.github/workflows/deploy.yml` on every push to `main`.
+The product name and links are in `src/site.ts`. The site is served by Cloudflare Workers static assets (`wrangler.jsonc`). Deploy with `pnpm run deploy`, which needs `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` in the environment.

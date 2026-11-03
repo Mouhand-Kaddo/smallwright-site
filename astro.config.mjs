@@ -3,8 +3,6 @@ import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://mouhand-kaddo.github.io',
-  base: '/smallwright-site/',
   build: {
     inlineStylesheets: 'always',
   },

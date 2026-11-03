@@ -28,3 +28,6 @@ pnpm-debug.log*
 .impeccable/questions/
 .impeccable/config.local.json
 .claude/skills/impeccable/scripts/bin/
+
+# wrangler local state
+.wrangler/
