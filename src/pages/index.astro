@@ -149,6 +149,21 @@ const requirements = [
           Screens from a real phone.
         </h2>
         <div class="mt-10 flex flex-col gap-12 lg:gap-16">
+          <figure class="flex flex-col gap-4">
+            <figcaption class="font-legend text-sm font-bold uppercase tracking-[0.14em] text-print-dim">One build, sped up</figcaption>
+            <video
+              src={`${base}demo.mp4`}
+              poster={`${base}demo-poster.jpg`}
+              controls
+              muted
+              playsinline
+              preload="none"
+              width="720"
+              height="1546"
+              aria-label="Asking the Builder for a water tracker: it asks a few questions, plans, compiles on the phone, Android installs the app and it opens"
+              class="h-auto w-[min(72vw,340px)] rounded-[1.25rem] ring-1 ring-white/10 shadow-[0_18px_36px_-18px_rgb(0_0_0/0.9)]"
+            ></video>
+          </figure>
           {
             screens.map((group) => (
               <div class="flex flex-col gap-4">
@@ -277,6 +292,12 @@ const requirements = [
             <li class="grid grid-cols-[2.5rem_1fr]">
               <span class="font-display font-black text-lcd">3</span>
               <span>The Builder carries the Worker. Tap Install the build worker and confirm Android's prompt.</span>
+            </li>
+            <li class="grid grid-cols-[2.5rem_1fr]">
+              <span class="font-display font-black text-lcd">4</span>
+              <span>
+                For updates, <a href={site.obtainiumAddUrl} class="text-print underline">add {site.name} to Obtainium</a>.
+              </span>
             </li>
           </ol>
         </div>
