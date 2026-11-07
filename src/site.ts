@@ -5,4 +5,5 @@ export const site = {
   url: 'https://smallwright.smallwright-site.workers.dev',
   sourceUrl: repository,
   releaseUrl: `${repository}/releases/latest`,
+  obtainiumAddUrl: `obtainium://add/${repository}`,
 };
